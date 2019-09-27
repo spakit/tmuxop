@@ -1,7 +1,5 @@
-#!/usr/bin/env node
+#!/bin/bash
 
-
-// run the CLI with the current process arguments
-require('../src/cli').run(process.argv)
-
-
+cmdpath=$(readlink -f `which tmuxop`)
+echopath=$(echo $cmdpath | rev | cut -d'/' -f2- | rev)/echo
+$($echopath)

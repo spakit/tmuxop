@@ -1,15 +1,19 @@
-// add your CLI-specific functionality here, which will then be accessible
-// to your commands
-module.exports = toolbox => {
-  toolbox.foo = () => {
-    toolbox.print.info('called foo extension')
-  }
+const resolve = require('path').resolve
 
-  // enable this if you want to read configuration in from
-  // the current folder's package.json (in a "tmuxop" property),
-  // tmuxop.config.json, etc.
-  // toolbox.config = {
-  //   ...toolbox.config,
-  //   ...toolbox.config.loadConfig(process.cwd(), "tmuxop")
-  // }
+module.exports = toolbox => {
+  toolbox.getPath = () => {
+    const { parameters } = toolbox
+    const { options } = parameters
+    const paramPath = parameters.first || (options.path === true ? '.' : options.path || '.')
+    if (paramPath === '.') {
+      return resolve(process.cwd(), paramPath)
+    }
+    return resolve(process.cwd(), paramPath)
+  },
+  toolbox.getName = () => {
+    const { parameters } = toolbox
+    const { options } = parameters
+    return parameters.second || (options.name === true ? 'tmuxop' : options.name || 'tmuxop')
+  },
+  toolbox.getFullPath = file => `${toolbox.getPath()}/${file}`.replace('//', '/')
 }

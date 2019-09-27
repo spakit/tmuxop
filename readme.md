@@ -1,25 +1,26 @@
 # tmuxop CLI
 
-A CLI for tmuxop.
+A CLI for tmux open projects (tmuxop).
 
-## Customizing your CLI
+## Requirements
 
-Check out the documentation at https://github.com/infinitered/gluegun/tree/master/docs.
+* [NodeJS](https://nodejs.org)
+* [NPM](https://npmjs.com) or [Yarn](https://yarnpkg.com)
 
-## Publishing to NPM
+## Install
 
-To package your CLI up for NPM, do this:
+If you is using NPM.
 
 ```shell
-$ npm login
-$ npm whoami
-$ npm lint
-$ npm test
-(if typescript, run `npm run build` here)
-$ npm publish
+$ npm i -g tmuxop
+```
+
+If you is using Yarn.
+
+```shell
+$ yarn global add tmuxop
 ```
 
 # License
 
 MIT - see LICENSE
-
