@@ -2,7 +2,6 @@
   "name": "tmuxop",
   "version": "0.0.1",
   "description": "tmuxop CLI",
-  "private": true,
   "bin": {
     "tmuxop": "bin/tmuxop"
   },
@@ -21,7 +20,16 @@
     "docs",
     "bin"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spakit/tmuxop.git"
+  },
+  "author": "Jean Bonilha",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spakit/tmuxop/issues"
+  },
+  "homepage": "https://github.com/spakit/tmuxop#readme",
   "dependencies": {
     "gluegun": "^2.1.0",
     "readline-sync": "^1.4.10",
