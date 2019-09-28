@@ -6,6 +6,7 @@ A CLI for tmux open projects (tmuxop).
 
 * [NodeJS](https://nodejs.org)
 * [NPM](https://npmjs.com) or [Yarn](https://yarnpkg.com)
+* [Tmux](https://github.com/tmux/tmux/wiki)
 
 ## Install
 
@@ -24,3 +25,4 @@ $ yarn global add tmuxop
 # License
 
 MIT - see LICENSE
+
